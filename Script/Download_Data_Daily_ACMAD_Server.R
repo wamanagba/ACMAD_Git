@@ -7,7 +7,7 @@
 library(rio)
 library(dplyr)
 #http://154.66.220.45:8080/thredds/fileServer/ACMAD/CDD/climatedataservice/Synoptic_Daily_CPC_Unified_Data/Niger/ZINDER.csv
-setwd("~/Desktop/Daily_Data/")
+setwd("C:/Users/Yacou/Desktop/ACMAD_Git/")
 #Importation of station list
 Station<-rio::import("Synoptic_Station_All.csv")
 

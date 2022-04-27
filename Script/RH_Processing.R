@@ -14,11 +14,11 @@ download.file(paste("http://iridl.ldeo.columbia.edu/expert/SOURCES/.NOAA/.NCEP-N
 
 
 Data<-ncdf4::nc_open(paste("Data/RH_",Month,"_",Year,"_",First_Day,"_",Last_Day,"_",P,".nc",sep=""))
-print(Data)
+#print(Data)
 Rh<-ncvar_get(Data,"rhum")
 
 X<-ncvar_get(Data,"X")
-
+X[1]
 Y<-ncvar_get(Data,"Y")
 nc_close(Data)
 
@@ -32,3 +32,4 @@ for (i in 1:length(X)) {
 }
 
 rio::export(Data,paste("Data/RH_",Month,"_",Year,"_",First_Day,"_",Last_Day,"_",P,".csv",sep=""))
+
