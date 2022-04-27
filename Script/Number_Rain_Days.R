@@ -11,7 +11,7 @@ Stations<-rio::import("Synoptic_Station_All.csv")
 
 # Importing the Niger stations
 CounTry= 'Niger'
-Niger_station= Station<-filter(Stations,Country==CounTry & !Station=="BILMA")
+Niger_station= Station<-filter(Stations,Country==CounTry)
 
 
 for (i in 1:length(Niger_station$Station)) {
